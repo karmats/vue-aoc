@@ -1,2 +1,3 @@
-# vue-aoc
-Solutions for Advent of Vue
+# Advent of vue
+
+Solutions for [Advent of Vue](https://adventofvue.com).
