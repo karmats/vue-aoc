@@ -21,9 +21,14 @@ const router = createRouter({
       component: () => import("../doors/2JokeGenerator.vue"),
     },
     {
-        path: "/3",
-        name: "counter",
-        component: () => import("../doors/3XmasCounter.vue"),
+      path: "/3",
+      name: "counter",
+      component: () => import("../doors/3XmasCounter.vue"),
+    },
+    {
+        path: "/4",
+        name: "tree",
+        component: () => import("../doors/4XmasTree.vue"),
       },
     {
       path: "/:pathMatch(.*)*",
