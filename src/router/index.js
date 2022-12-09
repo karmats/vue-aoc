@@ -21,6 +21,11 @@ const router = createRouter({
       component: () => import("../doors/2JokeGenerator.vue"),
     },
     {
+        path: "/3",
+        name: "counter",
+        component: () => import("../doors/3XmasCounter.vue"),
+      },
+    {
       path: "/:pathMatch(.*)*",
       name: "not-found",
       component: NotFound,
