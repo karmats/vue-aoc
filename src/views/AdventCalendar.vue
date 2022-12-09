@@ -2,7 +2,7 @@
   <div class="grid grid-cols-4 gap-4">
     <div
       v-for="door in doors"
-      class="max-w-sm rounded overflow-hidden shadow-lg bg-red"
+      class="max-w-sm rounded overflow-hidden shadow-lg bg-red-600 text-white"
     >
       <router-link :to="'/' + door">
         <div class="p-8">
