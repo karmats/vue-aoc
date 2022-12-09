@@ -3,7 +3,7 @@
     <div
       v-for="door in doors"
       class="max-w-sm rounded overflow-hidden shadow-lg bg-red-600 text-white"
-    >
+      >
       <router-link :to="'/' + door">
         <div class="p-8">
           <div class="font-bold text-xl text-center">{{ door }}</div>

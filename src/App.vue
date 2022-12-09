@@ -1,42 +1,31 @@
-<script setup>
-import { ref, watch } from "vue";
-
-const searchTerm = ref("");
-const products = ref([]);
-const loading = ref(false);
-
-let timer;
-const findProducts = async (term) => {
-  if (!term) {
-    products.value = [];
-    return;
-  }
-  if (timer) {
-    clearTimeout(timer);
-  }
-  timer = setTimeout(async () => {
-    try {
-      loading.value = true;
-      const response = await fetch(
-        `https://dummyjson.com/products/search?q=${term}`
-      );
-      const result = await response.json();
-      products.value = result.products;
-    } catch {
-      alert("Failed to fetch products :(");
-    } finally {
-      loading.value = false;
-    }
-  }, 300);
-};
-
-watch(searchTerm, (newTerm) => {
-  findProducts(newTerm);
-});
-</script>
-
 <template>
-  <div class="w-full h-full flex flex-col gap-5 justify-center items-center">
-    <router-view />
+  <header>
+    <nav
+      class="relative w-full flex flex-wrap items-center justify-between py-3 text-gray-dark bg-green shadow-lg"
+    >
+      <div
+        class="container-fluid w-full flex flex-wrap items-center justify-between px-6"
+      >
+        <div class="container-fluid">
+          <router-link class="text-xl" to="/">Calendar</router-link>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="flex flex-col gap-5 justify-center items-center p-6">
+    <main>
+      <router-view />
+    </main>
   </div>
+  <footer class="bottom-0 fixed w-full bg-green text-gray-dark p-3 text-center">
+    Made for
+    <a
+      href="https://adventofvue.com"
+      target="_blank"
+      rel="noreferrer noopener"
+      class="underline hover:bg-gray-dark hover:text-green"
+    >
+      Advent Of Vue 2022
+    </a>
+  </footer>
 </template>
