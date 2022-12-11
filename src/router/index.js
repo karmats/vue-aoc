@@ -32,8 +32,13 @@ const router = createRouter({
     },
     {
       path: "/5",
-      name: "tree",
+      name: "gift-label",
       component: () => import("../doors/5GiftLabel.vue"),
+    },
+    {
+      path: "/6",
+      name: "comparison",
+      component: () => import("../doors/6ItemComparison.vue"),
     },
     {
       path: "/:pathMatch(.*)*",
