@@ -26,10 +26,15 @@ const router = createRouter({
       component: () => import("../doors/3XmasCounter.vue"),
     },
     {
-        path: "/4",
-        name: "tree",
-        component: () => import("../doors/4XmasTree.vue"),
-      },
+      path: "/4",
+      name: "tree",
+      component: () => import("../doors/4XmasTree.vue"),
+    },
+    {
+      path: "/5",
+      name: "tree",
+      component: () => import("../doors/5GiftLabel.vue"),
+    },
     {
       path: "/:pathMatch(.*)*",
       name: "not-found",
