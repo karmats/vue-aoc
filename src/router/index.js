@@ -41,6 +41,11 @@ const router = createRouter({
       component: () => import("../doors/6ItemComparison.vue"),
     },
     {
+      path: "/7",
+      name: "presents",
+      component: () => import("../doors/7DragAndDropPresents.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "not-found",
       component: NotFound,
