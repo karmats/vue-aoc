@@ -46,6 +46,11 @@ const router = createRouter({
       component: () => import("../doors/7DragAndDropPresents.vue"),
     },
     {
+      path: "/8",
+      name: "happy-holidays",
+      component: () => import("../doors/8HappyHolidays.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "not-found",
       component: NotFound,
