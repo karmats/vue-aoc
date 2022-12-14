@@ -51,6 +51,11 @@ const router = createRouter({
       component: () => import("../doors/8HappyHolidays.vue"),
     },
     {
+      path: "/9",
+      name: "sorting-presents",
+      component: () => import("../doors/9SortingPresents.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "not-found",
       component: NotFound,
