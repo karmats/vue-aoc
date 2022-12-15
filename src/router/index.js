@@ -56,6 +56,31 @@ const router = createRouter({
       component: () => import("../doors/9SortingPresents.vue"),
     },
     {
+      path: "/10",
+      name: "secret-santa",
+      component: () => import("../doors/10SecretSanta.vue"),
+    },
+    {
+      path: "/10/clue-1",
+      name: "secret-santa-clue-1",
+      component: () => import("../components/Clue1.vue"),
+    },
+    {
+      path: "/10/clue-2",
+      name: "secret-santa-clue-2",
+      component: () => import("../components/Clue2.vue"),
+    },
+    {
+      path: "/10/clue-3",
+      name: "secret-santa-clue-3",
+      component: () => import("../components/Clue3.vue"),
+    },
+    {
+      path: "/10/answer",
+      name: "secret-santa-answer",
+      component: () => import("../components/SecretSantaAnswer.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "not-found",
       component: NotFound,
