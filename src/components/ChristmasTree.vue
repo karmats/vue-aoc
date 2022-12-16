@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ChristmasTree v-if="size > 1" :size="size - 1">
+    <ChristmasTree v-if="size > 1" :size="size - 1" :show-lights="showLights">
       <template #lights>
         <!-- Put two lights on each section of the tree -->
         <ChristmasLights v-for="i in 2" />
@@ -12,7 +12,7 @@
         v-for="_ in size"
         class="relative rounded-full bg-green w-16 h-16 -m-2 flex justify-center items-center"
       >
-        <slot name="lights"></slot>
+        <slot v-if="showLights" name="lights"></slot>
       </div>
     </div>
   </div>
@@ -23,6 +23,7 @@ import ChristmasLights from "./ChristmasLights.vue";
 withDefaults(
   defineProps<{
     size: number;
+    showLights?: boolean;
   }>(),
   {
     size: 1,
