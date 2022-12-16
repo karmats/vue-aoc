@@ -1,0 +1,31 @@
+<template>
+  <div class="w-full h-full flex justify-center items-center">
+    <ChristmasTree :size="7" :showLights="true" :showOrnaments="true">
+      <template #lights>
+        <ChristmasLights v-for="i in 2" />
+      </template>
+
+      <template #ornaments>
+        <ChristmasOrnament />
+      </template>
+
+      <!-- 👇 Part 2: Add alternating types of ornaments.
+             We can also alternate the types of ornaments that we put on the tree.
+             Putting content in these slots will override the #ornaments slot.
+             
+             Comment/uncomment this section to see the difference. -->
+      <!-- <template #even>
+        <ChristmasOrnament color="green" />
+      </template>
+      <template #odd>
+        <ChristmasOrnament color="red" />
+      </template> -->
+    </ChristmasTree>
+  </div>
+</template>
+
+<script setup>
+import ChristmasTree from "@/components/ChristmasTree.vue";
+import ChristmasLights from "@/components/ChristmasLights.vue";
+import ChristmasOrnament from "@/components/ChristmasOrnament.vue";
+</script>
