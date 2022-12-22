@@ -101,6 +101,11 @@ const router = createRouter({
       component: () => import("../doors/14SecretSantaGenerator.vue"),
     },
     {
+      path: "/15",
+      name: "xmas-radio",
+      component: () => import("../doors/15XmasRadio.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "not-found",
       component: NotFound,
