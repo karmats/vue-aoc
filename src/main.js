@@ -76,6 +76,13 @@ const i18n = createI18n({
 });
 
 createApp(App)
+  .directive("christmas", (el, { value, arg }) => {
+    el.classList.add("christmas-text");
+    el.classList.add(arg ?? "red-green");
+    if (value) {
+      el.style.animationDuration = `${value}s`;
+    }
+  })
   .use(router)
   .use(i18n)
   .use(autoAnimatePlugin)
