@@ -111,6 +111,11 @@ const router = createRouter({
       component: () => import("../doors/16ChristmasDirective.vue"),
     },
     {
+      path: "/17",
+      name: "renderless-component",
+      component: () => import("../doors/17RenderlessComponent.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "not-found",
       component: NotFound,
